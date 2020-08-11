@@ -11,19 +11,22 @@
 .chat-window{
   padding: 10px;
   width: 300px;
-  height: 400px;
+  height: 500px;
   overflow: hidden;
-  border: 1px solid #4080FF;
-  border-radius: 20px;
+  border: 1px solid #fbfcfd;
+  border-radius: 10px;
 }
 
 .app-mensajes{
   overflow-y:scroll;
-  height:270px;
+  height:70%;
   /*background:gray;*/
-  padding: 5px;
+  padding: 10px;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
 
 /* Animaciones */
 .animated {
@@ -53,24 +56,38 @@
 .fadeIn {
   animation-name: fadeIn;
 }
-
-
-.chat-window {
-  padding: 10px;
-  width: 300px;
-  height: 400px;
-  overflow: hidden;
-  border: 1px solid #4080ff;
-  border-radius: 20px;
-}
  
-.app-mensajes {
-  overflow-y: scroll;
-  height: 270px;
-  /*background:gray;*/
-  padding: 5px;
-}
- 
- .w120{
+.w120{
   width: 120px;
+}
+
+body {
+  background-color: black;
+  color: white !important;
+}
+
+hr {
+  border-color: white;
+}
+
+.img-circle {
+  width: 150px;
+}
+
+.card-title,
+.card-text {
+  color: black;
+}
+
+.badge {
+  margin-left: 5px;
+}
+
+.btn-outline-success {
+  margin-left: 5px;
+}
+
+.img-thumb {
+  width: 50px;
+  height: 50px;
 }
