@@ -19,13 +19,13 @@
 
 .app-mensajes{
   overflow-y:scroll;
-  height:70%;
+  height:72%;
   /*background:gray;*/
   padding: 10px;
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  display: scroll;
 }
 
 /* Animaciones */

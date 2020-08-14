@@ -16,12 +16,21 @@ export class ChatService {
 
 
   cargarMensajes() {
-    this.itemsCollection = this.afs.collection<Mensaje>('chats');
+    this.itemsCollection = this.afs.collection<Mensaje>('chats', ref => ref.orderBy('fecha','desc')
+                                                                            .limit(30) );
     
     return this.itemsCollection.valueChanges()
                               .pipe( map( (mensajes: Mensaje[]) => {
                                   console.log( mensajes );
-                                  this.chats = mensajes;
+
+                                  this.chats = [];
+
+                                  for ( let mensaje of mensajes ){
+                                    this.chats.unshift( mensaje );
+                                  }
+                                  //return opcional
+                                  return this.chats;
+                                //  this.chats = mensajes;
                                 } ) );
 
   }
