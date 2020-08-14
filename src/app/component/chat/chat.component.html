@@ -3,6 +3,14 @@
 
 <div class="app-mensajes" id="app-mensajes">
 
+    <div class="text-right" *ngFor="let chat of cs.chats">
+        <span class="badge badge-pill badge-light">Allan</span>
+        <p>
+            {{ chat.mensaje }}
+        </p>
+    </div>
+
+<!--    
     <div class="text-right">
         <span class="badge badge-pill badge-light">Allan</span>
         <p>
@@ -16,20 +24,7 @@
             Hola Allan
         </p>
     </div>
-
-    <div class="">
-        <span class="badge badge-pill badge-success">Paula</span>
-        <p>
-            Hola Allan
-        </p>
-    </div>
-
-    <div class="">
-        <span class="badge badge-pill badge-success">Paula</span>
-        <p>
-            Hola Allan
-        </p>
-    </div>
+-->
 
 </div>
 

@@ -15,14 +15,20 @@ export class ChatComponent {
   constructor( public cs: ChatService ) { 
 
     this.cs.cargarMensajes()
-            .subscribe( (mensajes:any[]) => {
-              console.log( mensajes );
-            })
+            .subscribe();
 
   }
 
   enviarMensaje() {
     console.log(this.mensaje);
+
+    if( this.mensaje.length === 0){
+      return;
+    }
+
+    this.cs.agregarMensaje( this.mensaje )
+            .then( ()=> this.mensaje = '' )
+            .catch( (err) => console.error('Error al enviar', err ) );
   }
 
 }
