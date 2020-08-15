@@ -15,12 +15,14 @@ import { environment } from '../environments/environment';
 import { ChatComponent } from './component/chat/chat.component'
 
 //Services
-import { ChatService } from "../app/services/chat.service"
+import { ChatService } from "../app/services/chat.service";
+import { LoginComponent } from './component/login/login.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChatComponent
+    ChatComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
