@@ -10,7 +10,14 @@
   </h1>
   <hr>
 
-  <app-login></app-login>
+  <div class="col-md-12 text-right" *ngIf="cs.usuario.uid">
+    <button type="button" class="btn btn-outline-danger" 
+            (click)="cs.logout()">
+      Salir
+    </button>
+  </div>
+
+  <app-login *ngIf="!cs.usuario.uid"></app-login>
 
 
   <!--

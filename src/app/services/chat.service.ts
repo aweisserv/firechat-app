@@ -35,16 +35,28 @@ export class ChatService {
   }
 
   login( proveedor: string ) {
+
+
     if ( proveedor === "google") {
+
       this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+
     } else if ( proveedor === "facebook"){
+
       this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider());
+
     } else {
+
       console.log("metodo inválido");
+
     }
+
+
   }
 
+
   logout() {
+    this.usuario = {};
     this.afAuth.auth.signOut();
   }
 
